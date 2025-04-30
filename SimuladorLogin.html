@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt/BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function submit() {
-        var nome = document.getElementById('nome').value;
-        var senha = document.getElementById('senha').value;
-        var recadoDiv = document.getElementById('mensagem');
-        
-        if (nome && senha) {
-        recadoDiv.innerHTML = "parabéns " + nome + " seu login foi efetuado com sucesso"
-        } else {
-        recadoDiv.innerHTML = "Preencha todos os campos.";
-        }
-        }
-        </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documento</title>
+<script>
+function submeter() {
+var nome = document.getElementById('nome').value;
+var senha = document.getElementById('senha').value;
+var avisoDiv = document.getElementById('mensagem');
+
+// Nome e senha secretos
+var nome1 = "erik";
+var senha1 = "1234";
+
+if (nome === nome1 && senha === senha1) {
+avisoDiv.innerHTML = "parabéns! " + nome + ", login efetuado com sucesso!";
+} else if (nome && senha) {
+avisoDiv.innerHTML = "senha ou usuairo errado?";
+} else {
+avisoDiv.innerHTML = "compelte todos os campos!";
+}
+}
+</script>
 </head>
 <body>
-    <h1>Simulador de Login</h1>
-    <p>Crie seu Login</p>
-    <input type="text" id="nome" placeholder="Digite seu nome" required>
-    <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required>
-    <button type="button" onclick="submit()">login</button>
-    <div id="mensagem"></div>
+<h1>Simulador de Login</h1>
+<p>Faça seu Login</p>
+<input type="text" id="nome" placeholder="digite seu nome" required>
+<input type="password" id="senha" name="senha" placeholder="digite sua senha" required>
+<button type="button" onclick="submeter()">Entrar</button>
+<div id="mensagem"></div>
 </body>
 </html>
 
-
-<!-- consultas chatgp -->
- <!-- (1) code review -->
