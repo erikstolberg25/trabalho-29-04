@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt/BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function submit() {
+        var nome = document.getElementById('nome').value;
+        var senha = document.getElementById('senha').value;
+        var recadoDiv = document.getElementById('mensagem');
+        
+        if (nome && senha) {
+        recadoDiv.innerHTML = "parabéns " + nome + " seu login foi efetuado com sucesso"
+        } else {
+        recadoDiv.innerHTML = "Preencha todos os campos.";
+        }
+        }
+        </script>
+</head>
+<body>
+    <h1>Simulador de Login</h1>
+    <p>Crie seu Login</p>
+    <input type="text" id="nome" placeholder="Digite seu nome" required>
+    <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required>
+    <button type="button" onclick="submit()">login</button>
+    <div id="mensagem"></div>
+</body>
+</html>
